@@ -1,0 +1,148 @@
+<!-- John Arcagua's HTML -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="background.css" rel="stylesheet" type="text/css">
+    <!--Code to source background.css-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+<body>
+<div class="container">
+    <!--The Background Content and the configurations are in CSS-->
+    <!--UAT Logo for the web page-->
+    <img id="logo" src="UATSpacelogo.png">
+
+    <div class="countdown-container" style="display:none; ">
+        <h1 class="heading text-pop-up-top"> UAT Space Program</h1>
+        <!--Title-->
+        <img src="rocketblastoff.png" class="vibrate-1" id="rocket"
+             alt="rocket">
+        <!--Rocket Image-->
+        <h2 id="DisplayCountdown">10</h2>
+        <!--Countdown Timer-->
+        <button class="button" id="startBtn">Start</button>
+        <!--Start Button-->
+        <button class="button" id="stopBtn" onclick="stopTimer()">Stop</button>
+        <!--Stop Button-->
+        <audio id="mySound" src="background.mp3" preload="false"
+               autoplay="false"></audio>
+    </div>
+
+    <div id="userInput">
+        <h2>Login</h2>
+        <form onsubmit="return false">
+            <input type="text" id="firstName" placeholder="Name" required>
+            <input type=" text" id="lastName" placeholder="Last Name" required>
+            <input type="number" id="badge" placeholder="badge number" required>
+            <button id="submit" onclick="validateUser()">Submit</button>
+        </form>
+    </div>
+
+
+</div>
+
+<table> <!---Table reading for Week 5-->
+    <tr>
+        <th>Data Type</th>
+        <th>Reading</th>
+    </tr>
+    <tr>
+        <td>Time elapsed:</td>
+        <td id="time">0</td>
+    </tr>
+    <tr>
+        <td>Latitude:</td>
+        <td id="lat">0</td>
+    </tr>
+    <tr>
+        <td >Longitude:</td>
+        <td id="long">0</td>
+    </tr>
+    <tr>
+        <td >GPS Altitude:</td>
+        <td id="gps-Alt">0</td>
+    </tr>
+    <tr>
+        <td>BMP Sensor Altitude:</td>
+        <td id="bmp-Sensor-Alt">0</td>
+    </tr>
+    <tr>
+        <td>BMP Sensor Pressure:</td>
+        <td id="bmp-Sensor-Pressure">0</td>
+    </tr>
+    <tr>
+        <td>BMP Sensor Temperature:</td>
+        <td id="bmp-Sensor-Temp">0</td>
+    </tr>
+    <tr>
+        <td>Digital Sensor Temperature:</td>
+        <td id="digital-Sensor-Temp">0</td>
+    </tr>
+    <tr>
+        <td>CSS Sensor Temperature:</td>
+        <td id="css-Sensor-temp">0</td>
+    </tr>
+    <tr>
+        <td>CSS Sensor eC02:</td>
+        <td id="css-sensor-eCO2">0</td>
+    </tr>
+    <tr>
+        <td>CSS Sensor TV0C:</td>
+        <td id="css-sensor-tVOC">0</td>
+    </tr>
+    <tr>
+        <td>UV:</td>
+        <td id="uv">0</td>
+    </tr>
+    <tr>
+        <td>Accel X:</td>
+        <td id="accel-x">0</td>
+    </tr>
+    <tr>
+        <td>Accel Y:</td>
+        <td id="accel-y">0</td>
+    </tr>
+    <tr>
+        <td>Accel Z:</td>
+        <td id="accel-z">0</td>
+    </tr>
+    <tr>
+        <td>Magnetic X:</td>
+        <td id="magnetic-x">0</td>
+    </tr>
+    <tr>
+        <td>Magnetic Y:</td>
+        <td id="magnetic-y">0</td>
+    </tr>
+    <tr>
+        <td>Magnetic Z:</td>
+        <td id="magnetic-z">0</td>
+    </tr>
+    <tr>
+        <td>Gyro X:</td>
+        <td id="gyro-x">0</td>
+    </tr>
+    <tr>
+        <td>Gyro Y:</td>
+        <td id="gyro-y">0</td>
+    </tr>
+    <tr>
+        <td>Gyro Z:</td>
+        <td id="gyro-z">0</td>
+    </tr>
+</table>
+<script src="dataLoader-1.js"></script>
+<script src="script.js"></script>
+
+<!--Code to source javascript from the other file-->
+</body>
+
+</html>
